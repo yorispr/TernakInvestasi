@@ -70,7 +70,6 @@ public class SessionManager {
         editor.commit();
     }
 
-
     /**
      * Check login method wil check user login status
      * If false it will redirect user to login page
