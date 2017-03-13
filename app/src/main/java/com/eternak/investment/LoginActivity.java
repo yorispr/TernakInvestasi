@@ -6,10 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import custom_font.MyEditText;
 
 public class LoginActivity extends AppCompatActivity {
     TextView signUp;
     ImageView next;
+    MyEditText email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,14 +21,18 @@ public class LoginActivity extends AppCompatActivity {
         signUp =(TextView)findViewById(R.id.signUp);
         next = (ImageView)findViewById(R.id.next);
 
+        email = (MyEditText)findViewById(R.id.inputEmail);
+
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(LoginActivity.this, NextLoginActivity.class);
-                startActivity(it);
-
-
-
+                if(!email.getText().toString().matches("")){
+                    it.putExtra("email",email.getText().toString());
+                    startActivity(it);
+                }else{
+                    Toast.makeText(getApplicationContext(),"Isikan email terlebih dahulu!",Toast.LENGTH_LONG).show();
+                }
 
             }
         });

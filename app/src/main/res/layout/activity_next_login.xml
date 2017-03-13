@@ -75,12 +75,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColorHint="#aeb0a5"
-                    android:hint="Enter Your Password"
+                    android:hint="Masukkan password"
                     android:layout_gravity="center"
                     android:inputType="textPassword"
                     android:background="#00000000"
                     android:textSize="12dp"
-                    android:letterSpacing="0.1"/>
+                    android:letterSpacing="0.1"
+                    android:id="@+id/inputPassword" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -92,7 +93,7 @@
                 <custom_font.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Forgot Password ?"
+                    android:text="Lupa password ?"
                     android:layout_gravity="center"
                     android:layout_marginTop="26dp"
                     android:textColor="#000000"
@@ -115,16 +116,12 @@
         android:scaleType="fitXY"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-
-
-
-        />
+        android:id="@+id/btnLogin" />
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/mainlogo"
         android:layout_marginTop="25dp"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/back" />
